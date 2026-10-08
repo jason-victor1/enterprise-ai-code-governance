@@ -1,0 +1,44 @@
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Testing & Fuzzing Artifacts
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+*.coverage.*
+mutmut-cache/
+.mutmut-cache/
+
+# Test execution outputs & temporary reports
+*.xml
+bandit_results.json
+blast_radius_report.json
+
+# Build & Packaging
+build/
+dist/
+*.egg-info/
+
+# YouTube Extraction Temp Folders (if run in same tree)
+.tmp_yt_extraction/
+
+# macOS / OS Artifacts
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo

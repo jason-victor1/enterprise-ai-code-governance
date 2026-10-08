@@ -1,0 +1,14 @@
+# Core Testing & Mutation Frameworks
+pytest>=8.0.0
+pytest-cov>=4.1.0
+mutmut>=2.4.4
+hypothesis>=6.100.0
+
+# Static Analysis & Security Scanners
+bandit>=1.7.8
+semgrep>=1.65.0
+
+# Orchestrator & Typing
+pydantic>=2.6.0
+pyyaml>=6.0.1
+requests>=2.31.0

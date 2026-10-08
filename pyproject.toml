@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enterprise-ai-code-governance"
+version = "0.1.0"
+description = "Deterministic AI code governance, blast-radius scoring, and multi-agent remediation"
+authors = [{ name = "Enterprise DevSecOps" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "mutmut>=2.4.4",
+    "hypothesis>=6.100.0",
+    "bandit>=1.7.8",
+    "semgrep>=1.65.0",
+    "pydantic>=2.6.0",
+    "pyyaml>=6.0.1",
+    "requests>=2.31.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["test-harness/tests"]
+pythonpath = [".", "test-harness"]
+addopts = "-v --tb=short"
+
+[tool.mutmut]
+paths_to_mutate = "test-harness/app/"
+backup = false
+runner = "pytest -q --tb=no test-harness/tests"

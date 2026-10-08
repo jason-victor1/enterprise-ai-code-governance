@@ -1,0 +1,18 @@
+# ==============================================================================
+# Enterprise AI Code Governance Platform - CODEOWNERS
+# ==============================================================================
+# Tier 1 paths require mandatory Senior Security sign-off.
+# PRs modifying these paths cannot be auto-merged by coding agents or bots.
+
+# Critical Infrastructure & Invariant Policies
+/policies/                             @security-architects
+/.github/workflows/                    @security-architects
+/requirements.txt                      @security-architects
+/pyproject.toml                        @security-architects
+
+# Tier 1 Critical State, Authentication & IAM
+/test-harness/app/tier1_iam_auth.py    @security-architects
+
+# Multi-Agent Trust Boundaries & Circuit Breaker Controls
+/orchestrator/circuit_breaker.py       @security-architects
+/orchestrator/schemas.py               @security-architects
